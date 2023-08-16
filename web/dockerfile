@@ -1,8 +1,9 @@
 FROM nginx:stable-alpine
-WORKDIR /app
+WORKDIR /web
 
 COPY package.json .
 
 RUN npm install
+RUN npm build
 
 COPY build/ /usr/share/nginx/html
