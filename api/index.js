@@ -5,10 +5,10 @@ const mysql = require("mysql2");
 const cors = require("cors");
 
 let db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "root",
-    database: "contacts",
+    host: process.env.MYSQL_HOST_IP,
+    user: process.env.MYSQL_USER,
+    password: process.env.MYSQL_PASSWORD,
+    database: process.env.MYSQL_DATABASE,
 });
 
 db.connect((err) => {
