@@ -29,9 +29,9 @@ services:
     build: 
       context: ./api
     depends_on:
-      - mysql_srv
+      - mysql_ctr
     environment:
-      MYSQL_HOST_IP: mysql_srv
+      MYSQL_HOST_IP: mysql_ctr
       MYSQL_USER: root
       MYSQL_DATABASE: contacts
       MYSQL_PASSWORD: root
