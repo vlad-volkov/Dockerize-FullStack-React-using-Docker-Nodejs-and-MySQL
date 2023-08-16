@@ -29,7 +29,7 @@ services:
     build: 
       context: ./api
     depends_on:
-      - mysql_ctr
+      - mysql_srv
     container_name: backend_ctr
     environment:
       MYSQL_HOST_IP: mysql_srv
