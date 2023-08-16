@@ -4,6 +4,6 @@ WORKDIR /web
 COPY package.json .
 
 RUN npm install
+COPY . .
 RUN npm build
-
-COPY build/ /usr/share/nginx/html
+CMD "cp build/ /usr/share/nginx/html"
