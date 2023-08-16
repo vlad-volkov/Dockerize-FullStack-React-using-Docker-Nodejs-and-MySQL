@@ -30,6 +30,7 @@ services:
       context: ./api
     depends_on:
       - mysql_ctr
+    container_name: backend_ctr
     environment:
       MYSQL_HOST_IP: mysql_ctr
       MYSQL_USER: root
@@ -43,6 +44,7 @@ services:
   frontend_srv:
     build: 
       context: ./web
+    container_name: frontend_ctr
     ports:
       - 3000:80
     volumes:
